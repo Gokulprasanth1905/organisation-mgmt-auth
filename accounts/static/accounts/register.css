@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+/* BG */
+.bg {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    z-index: -1;
+}
+
+/* CENTER */
+.register-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CARD */
+.register-card {
+    width: 420px;
+    padding: 35px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(20px);
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    color: white;
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.register-card h2 {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 25px;
+}
+
+/* INPUT */
+.field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 14px 12px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.field select option {
+    color: black;
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s;
+    background: rgba(0,0,0,0.6);
+    padding: 0 6px;
+}
+
+.field input:focus + label,
+.field input:valid + label,
+.field select:focus + label,
+.field select:valid + label {
+    top: -8px;
+    font-size: 11px;
+    color: #00d4ff;
+}
+
+/* ROW */
+.row {
+    display: flex;
+    gap: 15px;
+}
+
+/* BUTTON */
+.register-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #00d4ff, #007bff);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.register-btn:hover {
+    opacity: 0.9;
+}
+
+/* LOGIN LINK */
+.login-text {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+.login-text a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+#msg {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+}

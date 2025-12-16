@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background: #f4f6f9;
+}
+
+.topbar {
+    background: #1e293b;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions .btn {
+    margin-left: 10px;
+    padding: 8px 14px;
+    background: #0ea5e9;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.logout {
+    background: #ef4444;
+}
+
+.container {
+    padding: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+th {
+    background: #f1f5f9;
+}

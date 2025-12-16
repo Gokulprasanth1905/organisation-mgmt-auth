@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Org Management | Login</title>
+    <link rel="stylesheet" href="/static/accounts/login.css?v={{cache}}">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="login-wrapper">
+    <div class="login-card">
+        <h2>Welcome to GN Orgnistation</h2>
+        <p class="subtitle">Login to Org Management</p>
+
+        <form method="post" id="loginForm">
+            {% csrf_token %}
+
+            <div class="field">
+                <input type="text" name="username" required autocomplete="off">
+                <label>Username</label>
+            </div>
+
+            <div class="field">
+                <input type="password" name="password" required autocomplete="off">
+                <label>Password</label>
+            </div>
+
+            <div class="options">
+                <label class="remember">
+                    <input type="checkbox" name="remember" autocomplete="off">
+                    <span>Remember me</span>
+                </label>
+
+                <a href="#" class="forgot">Forgot password?</a>
+            </div>
+
+            <button class="login-btn">Login</button>
+
+            <p class="register-text">
+                Don’t have an account?
+                <a href="/register/">Register</a>
+            </p>
+        </form>
+    </div>
+</div>
+<script src="/static/accounts/login.js?v={{cache}}"></script>
+</body>
+</html>

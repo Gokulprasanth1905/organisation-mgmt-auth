@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f6f9;
+    color: #1f2937;
+}
+
+/* TOP BAR */
+.topbar {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #fff;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.top-actions .btn {
+    margin-left: 10px;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.btn.secondary {
+    background: #334155;
+    color: white;
+}
+
+.btn.danger {
+    background: #ef4444;
+    color: white;
+}
+
+.btn.edit {
+    background: #0ea5e9;
+    color: white;
+}
+
+.btn.delete {
+    background: #dc2626;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* CONTAINER */
+.container {
+    padding: 30px;
+}
+
+.container h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* TABLE */
+.table-wrapper {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f1f5f9;
+}
+
+th, td {
+    padding: 14px 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    color: #475569;
+    font-weight: 600;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tbody tr:hover {
+    background: #f9fafb;
+}
+
+/* ROLE TAGS */
+.role {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.role.hr {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.role.manager {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.role.staff {
+    background: #dcfce7;
+    color: #166534;
+}
+
+/* ACTION COLUMN */
+td.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.empty {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+}
+
+
+/* Update form styles */
+.hidden {
+    display: none;
+}
+
+.update-form {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.update-form h3 {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.form-row input,
+.form-row select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}

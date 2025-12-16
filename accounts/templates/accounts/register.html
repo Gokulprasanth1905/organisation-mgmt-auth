@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | Org Management</title>
+    <link rel="stylesheet" href="/static/accounts/register.css?v={{cache}}">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="register-wrapper">
+    <div class="register-card">
+        <h2>Create Account 🚀</h2>
+        <p class="subtitle">Join Org Management</p>
+
+        <form id="registerForm">
+            {% csrf_token %}
+
+            <div class="row">
+                <div class="field">
+                    <input type="text" name="first_name" required autocomplete="off">
+                    <label>First Name</label>
+                </div>
+                <div class="field">
+                    <input type="text" name="last_name" required autocomplete="off">
+                    <label>Last Name</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <input type="text" name="username" required autocomplete="off">
+                <label>Username</label>
+            </div>
+
+            <div class="field">
+                <input type="password" name="password" required autocomplete="off">
+                <label>Password</label>
+            </div>
+
+            <div class="row">
+                <div class="field">
+                    <select name="role" required>
+                        <option value="" hidden></option>
+                        <option value="HR">HR</option>
+                        <option value="MANAGER">Manager</option>
+                        <option value="STAFF">Staff</option>
+                        <option value="ADMIN">Admin</option>
+                    </select>
+                    <label>User Type</label>
+                </div>
+
+                <div class="field">
+                    <input type="text" name="department" required autocomplete="off">
+                    <label>Department</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <input type="text" name="phone_number" required autocomplete="off">
+                <label>Phone Number</label>
+            </div>
+
+            <button class="register-btn">Register</button>
+
+            <p class="login-text">
+                Already have an account?
+                <a href="/">Login</a>
+            </p>
+        </form>
+
+        <div id="msg"></div>
+    </div>
+</div>
+
+<script src="/static/accounts/register.js?v={{cache}}"></script>
+</body>
+</html>

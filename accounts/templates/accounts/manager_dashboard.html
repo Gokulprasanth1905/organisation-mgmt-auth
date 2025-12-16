@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager Dashboard | Org Management</title>
+    <link rel="stylesheet" href="/static/accounts/manager_dashboard.css?v={{cache}}">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <h2>Manager Dashboard</h2>
+
+    <div class="top-actions">
+        <a href="/home/" class="btn secondary">Home</a>
+        <a href="/logout/" class="btn danger">Logout</a>
+    </div>
+</div>
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+    <div class="card">
+        <h3>Create Employee</h3>
+        <p class="subtitle">Fill the details to add a new employee</p>
+
+        <form id="createEmployeeForm">
+            {% csrf_token %}
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" name="first_name" placeholder="Enter first name">
+                </div>
+
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" name="last_name" placeholder="Enter last name">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" name="username" placeholder="Unique username">
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="example@mail.com">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" name="password" placeholder="Temporary password">
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text" name="phone_number" placeholder="10 digit number">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label>Role</label>
+                    <select name="role">
+                        <option value="">Select role</option>
+                        <option value="STAFF">Staff</option>
+                        <option value="HR">HR</option>
+                        <option value="MANAGER">Manager</option>
+                        <option value="ADMIN">Admin</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Department</label>
+                    <input type="text" name="department" placeholder="Department name">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn primary" id="createEmployeeBtn">
+                    Create Employee
+                </button>
+                <button type="reset" class="btn secondary">
+                    Reset
+                </button>
+            </div>
+
+            <div id="msg"></div>
+        </form>
+    </div>
+
+</div>
+
+<script src="/static/accounts/manager_dashboard.js?v={{cache}}"></script>
+</body>
+</html>

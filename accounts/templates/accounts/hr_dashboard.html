@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HR Dashboard | Org Management</title>
+    <link rel="stylesheet" href="/static/accounts/hr_dashboard.css?v={{cache}}">
+</head>
+<body>
+
+<div class="topbar">
+    <h2>HR Dashboard</h2>
+
+    <div class="top-actions">
+        <a href="/home/" class="btn secondary">Home</a>
+        <a href="/logout/" class="btn danger">Logout</a>
+    </div>
+</div>
+
+<div class="container">
+    <h3>Employee Management</h3>
+
+    <div class="table-wrapper" id="placerow">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First</th>
+                    <th>Last</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Role</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- UPDATE FORM (HIDDEN) -->
+    <div class="update-form hidden" id="updateForm">
+        <h3>Update Employee</h3>
+
+        <form id="editEmployeeForm">
+            {% csrf_token %}
+            <div class="form-row">
+                <input type="text" name="first_name" placeholder="First Name">
+                <input type="text" name="last_name" placeholder="Last Name">
+            </div>
+
+            <div class="form-row">
+                <input type="text" name="username" placeholder="Username" readonly>
+                <input type="email" name="email" placeholder="Email">
+            </div>
+
+            <div class="form-row">
+                <input type="text" name="phone" placeholder="Phone Number">
+                <input type="text" name="department" placeholder="Department">
+            </div>
+
+            <div class="form-row">
+                <select name="role">
+                    <option value="HR">HR</option>
+                    <option value="MANAGER">MANAGER</option>
+                    <option value="STAFF">STAFF</option>
+                </select>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn edit" id="updatesavebtn">Save</button>
+                <button type="button" class="btn danger" id="updateCanelbtn">Cancel</button>
+            </div>
+        </form>
+        <div id="msg"></div>
+    </div>
+
+</div>
+
+<script src="/static/accounts/hr_dashboard.js?v={{cache}}"></script>
+</body>
+</html>

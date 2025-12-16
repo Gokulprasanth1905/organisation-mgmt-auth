@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* BACKGROUND */
+.bg {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, #1a2a6c, #000);
+    z-index: -1;
+}
+
+/* CENTER */
+.login-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CARD */
+.login-card {
+    width: 380px;
+    padding: 40px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    color: white;
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* FLOATING INPUT */
+.field {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.field input {
+    width: 100%;
+    padding: 14px 12px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.field input:focus + label,
+.field input:valid + label {
+    top: -8px;
+    background: rgba(0,0,0,0.7);
+    padding: 0 6px;
+    font-size: 11px;
+    color: #00d4ff;
+}
+
+/* OPTIONS */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.forgot {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #00d4ff, #007bff);
+    box-shadow: 0 10px 30px rgba(0,212,255,0.4);
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0,212,255,0.6);
+}
+
+/* REGISTER */
+.register-text {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 22px;
+}
+
+.register-text a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: 500;
+}
